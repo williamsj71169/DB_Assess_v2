@@ -1,0 +1,16 @@
+1-Name
+2-meal time
+3-"where"
+4-Vege
+5-Review
+6-Rating
+
+
+type-Name
+
+drop box-meal time
+drop box-where
+
+?-vege
+
+(already done)-rating
