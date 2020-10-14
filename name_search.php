@@ -8,7 +8,8 @@ if(isset($_POST['find_name']))
     
 $name = $_POST['name'];
 
-$showall_sql="SELECT * FROM `91879_book_reviews` WHERE `Name` LIKE '%$name%' LIMIT 0 , 30";
+$showall_sql="SELECT `Name` FROM `91879_food_reviews` ORDER BY `Name` ASC LIMIT 0 , 30";
+// SELECT * FROM `91879_food_reviews` ORDER BY `Name` ASC LIMIT 0 , 30
 $showall_query=mysqli_query($dbconnect, $showall_sql);
 $showall_rs=mysqli_fetch_assoc($showall_query);
 $count=mysqli_num_rows($showall_query);
@@ -52,10 +53,11 @@ $count=mysqli_num_rows($showall_query);
         
         <p>Name: <span class="sub_heading"><?php echo $showall_rs["Name"]; ?></span> </p>
         
-        <p>Author: <span class="sub_heading"><?php echo $showall_rs["Author"]; ?></span> </p>
+        <p>Meal Time: <span class="sub_heading"><?php echo $showall_rs["Meal Time"]; ?></span> </p>
         
-        <p>Genre: <span class="sub_heading"><?php echo $showall_rs["Genre"]; ?></span> </p>
+        <p>Where: <span class="sub_heading"><?php echo $showall_rs["Where"]; ?></span> </p>
         
+        <p>Vegetarian?: <span class="sub_heading"><?php echo $showall_rs["Vegetarian?"]; ?></span> </p>
         
         <p>Rating: <span class="sub_heading">
             
@@ -100,4 +102,4 @@ $count=mysqli_num_rows($showall_query);
 
 </div>    <!-- / main -->
         
-<?php include "bottombit.php"; ?>
+<?php include "bottom_bit.php"; ?>

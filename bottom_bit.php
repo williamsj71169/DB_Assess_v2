@@ -72,7 +72,7 @@
                 
                 ?>
             
-            <option value="<?php echo $meal_rs['Meal']; ?>"><?php echo $meal_rs['Meal']; ?></option>
+            <option value="<?php echo $meal_rs['Meal Time']; ?>"><?php echo $meal_rs['Meal Time']; ?></option>
             
             <?php
                 
@@ -97,7 +97,7 @@
     <form method="post" action="vege_search.php" enctype="multipart/form-data">
 
         <select name="vege" required>
-            <option value="" disabled selected>Vegetarian???</option>
+            <option value="" disabled selected>Vegetarian?</option>
             <?php
             // retrive unique values in vege column
             $vege_sql="SELECT DISTINCT `Genre` FROM `91879_book_reviews` ORDER BY `Genre` ASC ";
@@ -108,7 +108,7 @@
                 
                 ?>
             
-            <option value="<?php echo $vege_rs['Vege']; ?>"><?php echo $vege_rs['Vege']; ?></option>
+            <option value="<?php echo $vege_rs['Vegetarian?']; ?>"><?php echo $vege_rs['Vegetarian?']; ?></option>
             
             <?php
                 

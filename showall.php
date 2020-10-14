@@ -44,13 +44,13 @@ $count=mysqli_num_rows($showall_query);
             <!--- Results go here-->
     <div class="results">
         
-        <p>Name: <span class="sub_heading"><?php echo $showall_rs["Name"]; ?></span> </p>
+        <p>Name: <span class="sub_heading"><?php echo $name_rs["Name"]; ?></span> </p>
         
-        <p>Where: <span class="sub_heading"><?php echo $showall_rs["Where"]; ?></span> </p>
+        <p>Where: <span class="sub_heading"><?php echo $where_rs["Where"]; ?></span> </p>
         
-        <p>Meal: <span class="sub_heading"><?php echo $showall_rs["Meal"]; ?></span> </p>
+        <p>Meal: <span class="sub_heading"><?php echo $meal_rs["Meal"]; ?></span> </p>
         
-        <p>Vegetarian: <span class="sub_heading"><?php echo $showall_rs["Vegetarian"]; ?></span> </p>
+        <p>Vegetarian?: <span class="sub_heading"><?php echo $vegetarian_rs["Vegetarian?"]; ?></span> </p>
         
         
         <p>Rating: <span class="sub_heading">
@@ -93,7 +93,7 @@ $count=mysqli_num_rows($showall_query);
 
 
 </div>    <!-- / main -->
-     include "bottom_bit.php";
+<?php include "bottom_bit.php"; ?>
 ?>
         
        
