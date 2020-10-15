@@ -28,7 +28,7 @@
             <option value="" disabled selected>Where...</option>
             <?php
             // retrive unique values in genre column
-            $where_sql="SELECT `Where` FROM `91879_food_reviews` ORDER BY `Where` ASC ";
+            $where_sql="SELECT DISTINCT `Where` FROM `91879_food_reviews` ORDER BY `Where` ASC";
             $where_query=mysqli_query($dbconnect, $where_sql);
             $where_rs=mysqli_fetch_assoc($where_query);
             
@@ -96,31 +96,31 @@
 
     <form method="post" action="vege_search.php" enctype="multipart/form-data">
 
-        <select name="vege" required>
+        <select name="vegetarian" required>
             <option value="" disabled selected>Vegetarian?</option>
             <?php
             // retrive unique values in vege column
-            $vege_sql="SELECT DISTINCT `Genre` FROM `91879_book_reviews` ORDER BY `Genre` ASC ";
-            $vege_query=mysqli_query($dbconnect, $vege_sql);
-            $vege_rs=mysqli_fetch_assoc($vege_query);
+            $vegetarian_sql="SELECT DISTINCT `Vegetarian?` FROM `91879_food_reviews` ORDER BY `Vegetarian?` ASC";
+            $vegetarian_query=mysqli_query($dbconnect, $vegetarian_sql);
+            $vegetarian_rs=mysqli_fetch_assoc($vegetarian_query);
             
             do {
                 
                 ?>
             
-            <option value="<?php echo $vege_rs['Vegetarian?']; ?>"><?php echo $vege_rs['Vegetarian?']; ?></option>
+            <option value="<?php echo $vegetarian_rs['Vegetarian?']; ?>"><?php echo $vegetarian_rs['Vegetarian?']; ?></option>
             
             <?php
                 
             } // end of vege option retrieval
             
-            while($vege_rs=mysqli_fetch_assoc($vege_query));
+            while($vegetarian_rs=mysqli_fetch_assoc($vegetarian_query));
             
             ?>
             
         </select>
         
-        <input class="submit" type="submit" name="find_vege" value="Search" />
+        <input class="submit" type="submit" name="find_vegetarian" value="Search" />
 
     </form>
 

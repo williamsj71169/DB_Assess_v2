@@ -2,13 +2,31 @@
 
 
 // if find button pushed...
-if(isset($_POST['find_name']))
+if(isset($_POST['find_rating']))
     
 {
     
-$name = $_POST['name'];
+$amount=test_input(mysqli_real_escape_string($dbconnect,$_POST['amount']));
+$stars=test_input(mysqli_real_escape_string($dbconnect,$_POST['stars']));
 
-$showall_sql="SELECT * FROM `91879_food_reviews` WHERE `Name` LIKE '%$name%' LIMIT 0 , 30";
+if ($amount=="exactly")
+{
+    $showall_sql = "SELECT *FROM `91879_food_reviews` WHERE `Rating` = $stars LIMIT 0 , 30";
+}
+    
+elseif ($amount=="less")
+{
+    $showall_sql = "SELECT *FROM `91879_food_reviews` WHERE `Rating` <= $stars LIMIT 0 , 30";
+}
+
+else
+{
+    $showall_sql = "SELECT *FROM `91879_food_reviews` WHERE `Rating` >= $stars LIMIT 0 , 30";
+}
+
+
+
+    
 $showall_query=mysqli_query($dbconnect, $showall_sql);
 $showall_rs=mysqli_fetch_assoc($showall_query);
 $count=mysqli_num_rows($showall_query);
@@ -18,7 +36,7 @@ $count=mysqli_num_rows($showall_query);
         
 <div class="box main">
             
-    <h2>Name Search</h2>
+    <h2>Rating Search</h2>
     
     <?php
     
@@ -58,6 +76,7 @@ $count=mysqli_num_rows($showall_query);
         
         <p>Vegetarian: <span class="sub_heading"><?php echo $showall_rs["Vegetarian?"]; ?></span> </p>
         
+        
         <p>Rating: <span class="sub_heading">
             
             <?php 
@@ -92,9 +111,7 @@ $count=mysqli_num_rows($showall_query);
         
     } // end else
         
-    // if there are some, display them
-    
-    } // end isset
+} // end of button pushed if
         
     ?>
 

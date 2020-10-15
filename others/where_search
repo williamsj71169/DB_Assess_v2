@@ -9,6 +9,7 @@ if(isset($_POST['find_name']))
 $name = $_POST['name'];
 
 $showall_sql="SELECT * FROM `91879_food_reviews` WHERE `Name` LIKE '%$name%' LIMIT 0 , 30";
+// SELECT * FROM `91879_food_reviews` ORDER BY `Name` ASC LIMIT 0 , 30
 $showall_query=mysqli_query($dbconnect, $showall_sql);
 $showall_rs=mysqli_fetch_assoc($showall_query);
 $count=mysqli_num_rows($showall_query);

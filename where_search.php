@@ -2,13 +2,13 @@
 
 
 // if find button pushed...
-if(isset($_POST['find_name']))
+if(isset($_POST['find_where']))
     
 {
     
-$name = $_POST['name'];
+$where = $_POST['where'];
 
-$showall_sql="SELECT * FROM `91879_food_reviews` WHERE `Name` LIKE '%$name%' LIMIT 0 , 30";
+$showall_sql="SELECT * FROM `91879_food_reviews` WHERE `Where` LIKE '%$where%' LIMIT 0 , 30";
 $showall_query=mysqli_query($dbconnect, $showall_sql);
 $showall_rs=mysqli_fetch_assoc($showall_query);
 $count=mysqli_num_rows($showall_query);
@@ -18,7 +18,7 @@ $count=mysqli_num_rows($showall_query);
         
 <div class="box main">
             
-    <h2>Name Search</h2>
+    <h2>Where Search</h2>
     
     <?php
     
