@@ -10,7 +10,7 @@ body {
 
 .wrapper {
     display: grid;
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 300px 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
         "banner banner"
@@ -89,13 +89,13 @@ h1, h2, h3, h4 {
 
 /* Navigation Links */
 .nav a {font-weight: bold;}
-.nav a:link{color: #ca6f1e ;} /* orange */
+.nav a:link{color: #d9b00d ;} /* orange */
 .nav a:visited {color: #d9b00d;} /* dark yellow*/
 .nav a:hover {color: #000; text-decoration: none;} /* black */
 
 /* links in page */
 a {font-weight: bold;}
-a:link{color: #ca6f1e ;} /* orange */
+a:link{color: #f1c40f ;} /* orange */
 a:visited{color: #f1c40f;} /* yellow */
 a:hover{color: #000; text-decoration: none}    /* Black*/
 
