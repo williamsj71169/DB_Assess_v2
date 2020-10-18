@@ -29,14 +29,14 @@ body {
 .box {
     padding: 20px;
     border-radius: 10px;
-    background-color: #aed6f1;
+    background-color: #aed6f1; /* blue light */
 }
 
 /* Area colouring... */
 
 /* logo, banner and footer background are the same */
 .logo, .banner, .footer {
-    background-color: #3498db;  /* dark grey */
+    background-color: #3498db;  /* blue mid */
 }
 
 /* Set font on dark areas to white */
@@ -58,7 +58,7 @@ body {
 
 .nav {
     grid-area: nav;
-    background-color: #aed6f1;  /* silver */
+    background-color: #aed6f1;  /* blue light */
     font-size: 150%;
     text-align: center;
 }
@@ -66,7 +66,7 @@ body {
 .side {
     padding: 10px;
     grid-area: side;
-    background-color: #21618c ;
+    background-color: #21618c ; /*blue dark  */
 }
 
 .main {
@@ -89,15 +89,15 @@ h1, h2, h3, h4 {
 
 /* Navigation Links */
 .nav a {font-weight: bold;}
-.nav a:link, .nav a:visited {color: #ca6f1e;} /*dark red */
-.nav a:hover {color: #000; text-decoration: none;} /* chocolate brown */
-
+.nav a:link{color: #ca6f1e ;} /* orange */
+.nav a:visited {color: #d9b00d;} /* dark yellow*/
+.nav a:hover {color: #000; text-decoration: none;} /* black */
 
 /* links in page */
 a {font-weight: bold;}
-a:link{color: #ca6f1e ;} /*dark_red */
-a:visited{color: #f1c40f;} /* dark blue */
-a:hover{color: #000;}    /* Black*/
+a:link{color: #ca6f1e ;} /* orange */
+a:visited{color: #f1c40f;} /* yellow */
+a:hover{color: #000; text-decoration: none}    /* Black*/
 
 
 /* Contact Form Styling */

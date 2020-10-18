@@ -132,7 +132,7 @@
     
     <!---  start of ratings form-->
     
-    <form method="post" action="rating_search.php" enctype="multipart/form-data">
+    <form method="post" action="ratings_search.php" enctype="multipart/form-data">
         
         <select class="half width" name="amount">
             <option value="exactly" >Exactly...</option>

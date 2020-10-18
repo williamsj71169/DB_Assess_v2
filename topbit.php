@@ -22,7 +22,7 @@
 ?>
     
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-32">
     <meta name="description" content="Food Review Database">
     <meta name="keywords" content="Put keywords here">
     <meta name="author" content="Jessika Williams">
@@ -47,7 +47,7 @@
         <!-- logo image linking to home page goes here -->
         <a href="index.php">
             <div class="box logo"  title="Logo - Click here to go to the Home Page">
-            <img class="img-circle" src="images/gen_logo.png" width="150" height="150" alt="generic logo" />
+            <img class="img-circle" src="others/maybe_logo.png" width="150" height="150" alt="generic logo" />
             
             </div>    <!-- / logo -->
         </a>
@@ -57,8 +57,8 @@
 
         <!-- Navigation goes here.  Edit BOTH the file name and the link name -->
         <div class="box nav">
-            <a href="index.html">Home</a> | 
-            <a href="contact.html">Contact</a>
+            <a href="index.php">Home</a> | 
+            <a href="contact.php">Contact</a>
         </div>    <!-- / nav -->        
         
         
