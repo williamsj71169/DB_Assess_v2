@@ -2,8 +2,6 @@
         
     <h2>Search | <a class="side_nav" href="showall.php">Show All</a></h2>
 
-    <i>Type part of the meals name if desired</i>
-
     <hr /> 
 
     <!--- START OF Name Search -->
