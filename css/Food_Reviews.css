@@ -89,15 +89,15 @@ h1, h2, h3, h4 {
 
 /* Navigation Links */
 .nav a {font-weight: bold;}
-.nav a:link{color: #d9b00d ;} /* orange */
-.nav a:visited {color: #d9b00d;} /* dark yellow*/
+.nav a:link{color: #21618c ;} /* dark blue */
+.nav a:visited{color: #21618c}
 .nav a:hover {color: #000; text-decoration: none;} /* black */
 
 /* links in page */
 a {font-weight: bold;}
-a:link{color: #f1c40f ;} /* orange */
-a:visited{color: #f1c40f;} /* yellow */
-a:hover{color: #000; text-decoration: none}    /* Black*/
+a:link{color: #f1c40f ;} /* yellow */
+a:visited{color: #f1c40f}
+a:hover{color: #aed6f1; text-decoration: none}    /* blue light*/
 
 
 /* Contact Form Styling */
